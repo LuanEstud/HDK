@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">  
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <title>HDK</title>
+    </head>
+    <body>
+        <header class="Menu">
+            <div class="Conteinerlogo">HDK</div>
+            <nav class="OpcoesMenu">
+                <ul>
+                    <li id="home">Home</li>
+                    <li id="novo">Novo Chamado</li>
+                    <li id="status">Status Chamado</li>
+                    <li id="estatistica">Estatísticas</li>
+                    <li id="estatistica">Sair</li>
+                </ul>
+            </nav>
+        </header>
+        <section class="Conteint">
+            <header class="tituloTela">
+                <div>Novo Chamado</div>
+            </header>
+            <div id="graficoPrincipal" style="display:none">
+                <div id="chart_div" style="height: 90vh;"></div>
+            </div>
+            <div id="cadastroChamado">
+                <form style="padding: 20px 0 0 10px">
+                    <div>
+                        <label for="data">Data:</label>
+                        <input id="data" type="text"><span>Hoje</span>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </body>
+</html>
