@@ -3,8 +3,8 @@ body{
     margin: 0;
 }
 .Menu{
-    float: left;
-    position: fixed;
+    left: 0;
+    position: absolute;
     width: 300px;
     height: 100vh;
     background-color: #1E90FF;
@@ -48,18 +48,17 @@ body{
 }
 
 .Conteint{
-    width:  78%;
-    height: 100vh;
-    float: right;
+    margin-left: 300px;
 }
 
 .tituloTela{
-    width: 100%;
     background-color: #1E90FF;
-    height: 98px;
-    z-index: 500;
+    height: 100px;
+}
+
+.body{
     position: relative;
-    right: 1px;
+    z-index: -1;
 }
 
 .tituloTela > div{
@@ -69,4 +68,24 @@ body{
     font-weight: bold;
     padding: 50px 22px 0 0px;
     float: right;
+}
+
+.bodyShow{
+    animation-name: bodyShow;
+    animation-duration: 2s;
+}
+
+.bodyHide{
+    animation-name: bodyHide;
+    animation-duration: 2s;
+}
+
+@keyframes bodyShow{
+    0% {right: 1070px;}
+    100% {right: 0;}
+}
+
+@keyframes bodyHide{
+    0% {right: 0;}
+    100% {right: 1070px;}
 }
