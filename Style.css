@@ -11,6 +11,7 @@ body{
     -webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.62);
     -moz-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.62);
     box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.62);
+    z-index: 500;
 }
 .Center{
     margin: 0 auto;
@@ -54,11 +55,11 @@ body{
 .tituloTela{
     background-color: #1E90FF;
     height: 100px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .body{
     position: relative;
-    z-index: -1;
 }
 
 .tituloTela > div{
@@ -72,12 +73,24 @@ body{
 
 .bodyShow{
     animation-name: bodyShow;
-    animation-duration: 2s;
+    animation-duration: 1s;
 }
 
 .bodyHide{
     animation-name: bodyHide;
-    animation-duration: 2s;
+    animation-duration: 1s;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+}
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
 }
 
 @keyframes bodyShow{
