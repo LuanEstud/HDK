@@ -93,6 +93,16 @@ body{
     margin-bottom: 20px;
 }
 
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table th {
+    width: 100px;
+    height: 25px;
+}
+
 @keyframes bodyShow{
     0% {right: 1070px;}
     100% {right: 0;}

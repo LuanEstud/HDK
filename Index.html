@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="style.css">  
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
@@ -18,15 +19,15 @@
                 <ul>
                     <li onclick="trocaBody('home')">Home</li>
                     <li onclick="trocaBody('novoChamado')">Novo Chamado</li>
-                    <li onclick="trocaBody('')">Status Chamado</li>
-                    <li onclick="trocaBody('')">Estatísticas</li>
+                    <li onclick="trocaBody('statusChamado')">Status Chamado</li>
+                    <li onclick="trocaBody('estatisticas')">Estatísticas</li>
                     <li id="sair">Sair</li>
                 </ul>
             </nav>
         </header>
         <section class="Conteint">
             <div id="home" class="body bodyShow">
-                <div id="chart_div" style="height: 90vh;"></div>
+                <div id="ChartPrincipal" style="height: 90vh;"></div>
             </div>
             <div id="novoChamado" class="body bodyHide" style="display:none">
                 <header class="tituloTela">
@@ -45,6 +46,7 @@
                         <div class="row">
                             <label for="setor">Setor:</label>
                             <select name="" id="setor">
+                                <option value="">Selecione</option>
                                 <option value="1">Administração</option>
                                 <option value="2">Contabilidade</option>
                                 <option value="3">Clube Slim</option>
@@ -56,20 +58,123 @@
                         <div class="row">
                             <label for="tipoProblema">Tipo Problema:</label>
                             <select name="" id="tipoProblema">
+                                <option value="">Selecione</option>
                                 <option value="1">Erro</option>
                                 <option value="2">Solicitação</option>
                             </select>
                         </div>
                         <div class="row">
-                            <label for="descricao">Descrição:</label>
-                            <textarea name="" id="descricao" cols="30" rows="10"></textarea>
+                            <label for="prioridade">Prioridade:</label>
+                            <select name="" id="prioridade">
+                                <option value="">Selecione</option>
+                                <option value="1">Alta</option>
+                                <option value="2">Média</option>
+                                <option value="3">Baixa</option>
+                            </select>
                         </div>
                         <div class="row">
+                            <label for="descricao">Descrição:</label>
+                            <textarea name="" id="descricao" cols="30" rows="10"></textarea>
                             <label for="Sugestao">Sugestão de Solução:</label>
                             <textarea name="" id="Sugestao" cols="30" rows="10"></textarea>
                         </div>
+                        <div class="row">
+                            <label for="file">Anexo:</label>
+                            <input id="file" type="file">
+                        </div>
+                        <div class="row">
+                            <div style="float: right;">
+                                <button id="cadastrar" type="submit">Cadastrar</button>
+                                <button id="limpar" type="button">Limpar</button>
+                            </div>
+                        </div>
                     </div>
                 </form>
+            </div>
+            <div id="statusChamado" class="body bodyHide" style="display:none">
+                <header class="tituloTela">
+                    <div>Status Chamado</div>
+                </header>
+                <div class="container">
+                    <div class="row">
+                        <table style="margin: 100px auto 0 auto;">
+                            <thead>
+                                <tr>
+                                    <th>Usuário</th>
+                                    <th>Protocolo</th>
+                                    <th>Data</th>
+                                    <th>Responsável</th>
+                                    <th>Prioridade</th>
+                                    <th>Tempo Gasto</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Edgar</td>
+                                    <td>FIX001-2018</td>
+                                    <td style="text-align: center;">25/04/2018</td>
+                                    <td>Luan</td>
+                                    <td>Alta</td>
+                                    <td>2 Horas</td>
+                                    <td>Fechado</td>
+                                    <td>
+                                        <i class="material-icons">search</i>
+                                        <i class="material-icons">edit</i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Edgar</td>
+                                    <td>FIX001-2018</td>
+                                    <td style="text-align: center;">25/04/2018</td>
+                                    <td>Luan</td>
+                                    <td>Alta</td>
+                                    <td>2 Horas</td>
+                                    <td>Fechado</td>
+                                    <td>
+                                        <i class="material-icons">search</i>
+                                        <i class="material-icons">edit</i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Edgar</td>
+                                    <td>FIX001-2018</td>
+                                    <td style="text-align: center;">25/04/2018</td>
+                                    <td>Luan</td>
+                                    <td>Alta</td>
+                                    <td>2 Horas</td>
+                                    <td>Fechado</td>
+                                    <td>
+                                        <i class="material-icons">search</i>
+                                        <i class="material-icons">edit</i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Edgar</td>
+                                    <td>FIX001-2018</td>
+                                    <td style="text-align: center;">25/04/2018</td>
+                                    <td>Luan</td>
+                                    <td>Alta</td>
+                                    <td>2 Horas</td>
+                                    <td>Fechado</td>
+                                    <td>
+                                        <i class="material-icons">search</i>
+                                        <i class="material-icons">edit</i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="estatisticas" class="body bodyHide" style="display:none">
+                <header class="tituloTela">
+                        <div>Estatísticas</div>
+                </header>
+                <div style="margin-top: 20px">
+                    <div id="ChartTipoProblema"></div>
+                    <div id="ChartPrioridade"></div>
+                </div>
             </div>
         </section>
     </body>
