@@ -1,6 +1,7 @@
-body{
+body, html{
     padding: 0;
     margin: 0;
+    height: 100%;
 }
 .Menu{
     left: 0;
@@ -101,6 +102,37 @@ table, th, td {
 table th {
     width: 100px;
     height: 25px;
+}
+
+.fundo{ 
+    background-image: url("LoginFundo.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+}
+
+.loginFundo{
+    width: 300px;
+    height: 300px;
+    background-color:#1E90FF;
+    opacity: 0.8;
+    position: relative;
+    top: 50%;
+    margin-top: -170px;
+}
+
+.input{
+    margin-top: 30px;
+}
+
+.button{
+    width: 173px;
+    height: 40px;
+    margin-top: 30px;
 }
 
 @keyframes bodyShow{

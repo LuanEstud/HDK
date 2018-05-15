@@ -13,15 +13,27 @@
         <title>HDK</title>
     </head>
     <body>
+        <div class="fundo" id="login">
+            <div class="loginFundo container">
+                <form>
+                    <div class="Conteinerlogo">HDK</div>
+                    <div style="margin: 0 auto; width: 173px;">
+                        <input class="input" type="text" name="" id="login" placeholder="LOGIN">
+                        <input class="input" type="password" name="" id="senha" placeholder="SENHA">
+                        <button class="button" type="button" onclick="logar('login')">ENTRAR</button>
+                    </div>
+                </form>
+            </div>
+        </div>
         <header class="Menu">
             <div class="Conteinerlogo">HDK</div>
             <nav class="OpcoesMenu">
                 <ul>
                     <li onclick="trocaBody('home')">Home</li>
                     <li onclick="trocaBody('novoChamado')">Novo Chamado</li>
-                    <li onclick="trocaBody('statusChamado')">Status Chamado</li>
+                    <li onclick="trocaBody('statusChamado')">Status Chamados</li>
                     <li onclick="trocaBody('estatisticas')">Estatísticas</li>
-                    <li id="sair">Sair</li>
+                    <li onclick="sair('login')">Sair</li>
                 </ul>
             </nav>
         </header>
@@ -119,8 +131,8 @@
                                     <td>2 Horas</td>
                                     <td>Fechado</td>
                                     <td>
-                                        <i class="material-icons">search</i>
-                                        <i class="material-icons">edit</i>
+                                        <i style="cursor: pointer;" class="material-icons">search</i>
+                                        <i style="cursor: pointer;" class="material-icons">edit</i>
                                     </td>
                                 </tr>
                                 <tr>

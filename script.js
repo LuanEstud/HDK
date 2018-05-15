@@ -5,3 +5,11 @@ function trocaBody(id){
     });
   }
 }
+
+function logar(id){
+    $('#' + id).fadeOut(1000) 
+}
+
+function sair(id){
+  $('#' + id).show() 
+}
